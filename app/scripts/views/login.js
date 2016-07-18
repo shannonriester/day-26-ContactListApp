@@ -3,9 +3,7 @@ import Backbone from 'backbone';
 
 import router from '../router';
 import settings from '../settings';
-
 import session from '../models/session';
-
 import renderSignup from './signup';
 
 function renderLogin(){

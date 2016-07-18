@@ -1,7 +1,5 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
-
-// import entry
 import settings from './settings';
 import session from './models/session';
 

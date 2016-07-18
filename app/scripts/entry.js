@@ -1,13 +1,9 @@
 import $ from 'jquery';
-// window.$
 import Backbone from 'backbone';
 
+import router from './router';
 import settings from './settings';
 import session from './models/session';
-
-import router from './router';
-
-
 
 $(document).ajaxSend(function(evt, xhrAjax, jqueryAjax){
   console.log('interecepted');

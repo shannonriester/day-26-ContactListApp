@@ -1,11 +1,9 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 
-import settings from '../settings';
 import router from '../router';
-
+import settings from '../settings';
 import session from '../models/session';
-
 import renderLogin from './login';
 
 function renderSignup(){

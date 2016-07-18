@@ -3,7 +3,7 @@ import Backbone from 'backbone';
 
 import settings from '../settings';
 
-const Contact = Backbone.Mode.Extend({
+const Contact = Backbone.Model.extend({
   idAttribute: '_id',
   urlRoot: `https://baas.kinvey.com/appdata/${settings.appId}/contacts`,
   defaults: {
@@ -14,5 +14,4 @@ const Contact = Backbone.Mode.Extend({
   }
 });
 
-let contact = new Contact();
-export default contact;
+export default Contact;

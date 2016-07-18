@@ -3,9 +3,7 @@ import Backbone from 'backbone';
 
 import router from '../router';
 import settings from '../settings';
-
 import session from '../models/session';
-
 import renderLogin from './login';
 
 function renderHeader(){
@@ -19,14 +17,25 @@ function renderHeader(){
         <ul class="ul-nav">
           <li id="contacts-link">Contacts</li>
           <li id="create-new-link">Create New</li>
-          <li>Settings</li>
+          <li id="settings">Settings</li>
         </ul>
       </nav>
     </header>
     `);
 
-    $header.find('button').on('click',function(evt){
-      sessionStorage.removeItem('session');
+    $header.find('li').on('click', function(evt){
+      evt.preventDefault();
+      // console.log('clicked');
+      if ($(evt.target).attr('id') === 'contacts-link'){
+        router.navigate('contacts', {trigger:true});
+      } else if ($(evt.target).attr('id') === 'create-new-link') {
+        router.navigate('contacts/new', {trigger:true});
+      } else if ($(evt.target).attr('id') === 'settings') {
+        router.navigate('profile/settings', {trigger:true});
+      }
+    });
+
+    $header.find('button').on('click',function(){
       $.ajax({
         type: 'POST',
         url: `https://baas.kinvey.com/user/${settings.appKey}/_logout`,
@@ -35,16 +44,16 @@ function renderHeader(){
         },
         contentType: 'application/json',
         success: function(response){
+          sessionStorage.removeItem('session');
+          delete session.authtoken;
           router.navigate('login', {trigger:true});
-          console.log('you logged out!');
+          console.log('You logged out!');
         },
         error: function(){
           console.log('Error! You failed to logout! Check header.js');
         }
       });
-
     });
-
 
   return $header;
 }
