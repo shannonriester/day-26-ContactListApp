@@ -7,6 +7,8 @@ import renderLogin from './views/login';
 import renderSignup from './views/signup';
 import renderHeader from './views/header';
 import renderContacts from './views/contacts';
+import createNew from './views/newContact';
+
 
 const Router = Backbone.Router.extend({
 
@@ -39,6 +41,11 @@ contactListFunction : function(){
     let $header = renderHeader();
     // let $contactList = renderContacts();
     $('.container').empty().append($header);
+},
+newContactFunction : function(){
+  let $header = renderHeader();
+  let $contactForm = createNew();
+  $('.container').empty().append($header).append($contactForm);
 }
 
 });

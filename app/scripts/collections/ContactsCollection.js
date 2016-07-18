@@ -5,10 +5,9 @@ import Contact from '../models/contactModel';
 
 const Contacts = Backbone.Collection.extend({
   model: Contact,
-  url: `https://baas.kinvey.com/appdata/${settings.appId}/blogPosts`
+  url: `https://baas.kinvey.com/appdata/${settings.appKey}/contacts`
 });
 
-
-let contactsCollection = new Contact();
+let contactsCollection = new Contacts();
 
 export default contactsCollection;

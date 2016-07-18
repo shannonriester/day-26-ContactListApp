@@ -6,13 +6,13 @@ import Contact from '../models/contactModel';
 import contactsCollection from '../collections/contactsCollection';
 
 function createNew() {
-  let $newContact = $(`
+    let $newContact = $(`
     <main>
     	<form class="form-new-contact">
-    		<input type="text" name="fullname" placeholder="fullname">
-    		<input type="text" name="nickname" placeholder="fullname">
-    		<input type="text" name="email" placeholder="fullname">
-    		<input type="text" name="phone" placeholder="fullname">
+    		<input id="#fullname" type="text" name="fullname" placeholder="fullname">
+    		<input id="#nickname" type="text" name="nickname" placeholder="nickname">
+    		<input id="#email" type="text" name="email" placeholder="email">
+    		<input id="#phone" type="text" name="phone" placeholder="phone">
         <button id="clear">clear</button>
         <button id="cancel">cancel</button>
         <button id="add-new">add new</button>
@@ -20,20 +20,36 @@ function createNew() {
     </main>
     </div>
       `);
-      $contactsPage.find('#add-new').on('click', function(){
+    $newContact.find('#add-new').on('click', function(evt) {
+        evt.preventDefault();
         contactsCollection.create({
-            fullname: $('input[name="fullname"]').val(),
-            nickname: $('input[name="nickname"]').val(),
-            email: $('input[name="email"]').val(),
-            phone: $('input[name="phone"]').val()
+            fullname: $newContact.find('#fullname').val(),
+            nickname: $newContact.find('#nickname').val(),
+            email: $newContact.find('#email').val(),
+            phone: $newContact.find('#phone').val()
         }, {
-        success: function(response){
-          router.navigate('contacts', {trigger:true});
-        },
-        error: function(){
-          console.log('Error creating new contact. See newContact.js');
-        }
-      });
+            success: function(response) {
+                router.navigate('contacts', {
+                    trigger: true
+                });
+            },
+            error: function() {
+                console.log('Error creating new contact. See newContact.js');
+            }
+        });
+    });
+
+    $newContact.find('#clear').on('click', function(evt) {
+      evt.preventDefault();
+      $('input[name="fullname"]').val('');
+      $('input[name="nickname"]').val('');
+      $('input[name="email"]').val('');
+      $('input[name="phone"]').val('');
+    });
+
+    $newContact.find('#cancel').on('click', function(evt) {
+      evt.preventDefault();
+      router.navigate('contacts', {trigger:true});
     });
 
     return $newContact;
