@@ -519,7 +519,7 @@ header {
     display: none; }
 
 .show-dropdownView {
-  background: yellow; }
+  background: rgba(26, 94, 99, 0.8); }
   .show-dropdownView .div-dropdown {
     display: block; }
 
