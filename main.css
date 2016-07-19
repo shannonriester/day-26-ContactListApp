@@ -525,13 +525,15 @@ header {
   text-align: center; }
   #contacts .ul-contact-list li {
     list-style-type: none;
-    padding: 2%;
+    margin: 2%;
     color: #00BFB2;
     font-size: 1.1em;
     background: #C5CBD3; }
+    #contacts .ul-contact-list li:hover {
+      border: 2px dotted #8332AC; }
     #contacts .ul-contact-list li h3 {
       color: rgba(131, 50, 172, 0.6);
-      width: 6%;
+      width: 25%;
       margin: 0 auto;
       font-size: 1.5em; }
 
