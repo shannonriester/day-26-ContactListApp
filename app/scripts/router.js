@@ -38,6 +38,7 @@ signupFunction : function(){
   let $login = renderLogin();
   let $signup = renderSignup();
   $('.container').empty().append($login).append($signup);
+  $signup.find('.sub-signup-container').toggleClass('slidDownView');
 },
 contactListFunction : function(){
     let $header = renderHeader();
