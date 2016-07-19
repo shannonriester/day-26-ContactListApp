@@ -1,0 +1,19 @@
+
+//toggle part
+.test {
+  background: red;
+  height: 10%;
+  display: flex;
+  padding: 20px;
+  transition: 500ms;
+  .div-dropdown {
+    display: none;
+  }
+}
+
+.show-dropdownView {
+  background: yellow;
+  .div-dropdown {
+    display: block;
+  }
+}

@@ -1,18 +1,15 @@
-//toggle part
-.test {
-  background: red;
-  height: 10%;
-  display: flex;
-  padding: 20px;
-  transition: 500ms;
-  .div-dropdown {
-    display: none;
-  }
-}
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "_variables.scss";
+@import "login.scss";
+@import "signup.scss";
+@import "header.scss";
+@import "contacts.scss";
+@import "newContact.scss";
 
-.show-dropdownView {
-  background: yellow;
-  .div-dropdown {
-    display: block;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir;
+  background: $background;
+  color: $primary;
 }
