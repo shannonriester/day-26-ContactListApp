@@ -1,15 +1,89 @@
-.test {
-  background: red;
-  height: 10%;
-  display: flex;
-  padding: 20px;
-  transition: 500ms; }
-  .test .div-dropdown {
-    display: none; }
+/*
+Error: Undefined variable: "$primary".
+        on line 14 of app/scss/login.scss
+        from line 3 of app/scss/main.scss
 
-.show-dropdownView {
-  background: yellow; }
-  .show-dropdownView .div-dropdown {
-    display: block; }
+9: body {
+10:   margin: 0;
+11:   padding: 0;
+12:   font-family: Avenir;
+13:   background: $background;
+14:   color: $primary;
+15: }
 
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+app/scss/login.scss:14
+app/scss/main.scss:3
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/Users/shannonriester/.rvm/rubies/ruby-2.2.1/lib/ruby/gems/2.2.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/Users/shannonriester/.rvm/gems/ruby-2.2.1/bin/sass:23:in `load'
+/Users/shannonriester/.rvm/gems/ruby-2.2.1/bin/sass:23:in `<main>'
+/Users/shannonriester/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/shannonriester/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$primary\".\A         on line 14 of app/scss/login.scss\A         from line 3 of app/scss/main.scss\A \A 9: body {\A 10:   margin: 0;\A 11:   padding: 0;\A 12:   font-family: Avenir;\A 13:   background: $background;\A 14:   color: $primary;\A 15: }"; }
