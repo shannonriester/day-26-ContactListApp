@@ -5,7 +5,7 @@ import router from '../router';
 import contactsCollection from '../collections/contactsCollection';
 import Contact from '../models/contactModel';
 
-function renderContacts(contactsCollection) {
+function renderContacts() {
   let $contactsPage = $(`
     <div id="contacts">
       <main>
@@ -18,17 +18,27 @@ function renderContacts(contactsCollection) {
     `);
 
  function renderSingleContact(contact){
-   let $contact = $(`
-     <li>
+   console.log(contact);
+   let $contactLi = $(`
+     <li class="test">
        <h3 class="contact-title">${contact.get('fullname')}</h3>
-       <p class="contact-nickname">${contact.get('nickname')}</p>
-       <div class="view-contact">
-         <a href="#contacts/"${contact.get('_id')}><i class="fa fa-eye viewIcon" aria-hidden="true"></i></a>
+       <div class="div-dropdown">
+          <ul class="ul-dropdown">
+            <li class="contact-nickname">${contact.get('nickname')}</li>
+            <li>${contact.get('email')}</li>
+            <li>${contact.get('phone')}</li>
+          </ul>
        </div>
      </li>
      `);
-     $contactsPage.find('.ul-contact-list').append($contact);
+     $contactsPage.find('.ul-contact-list').append($contactLi);
+     $contactLi.find('h3').on('click', function(evt){
+       evt.preventDefault();
+       $contactLi.toggleClass('show-dropdownView');
+     });
  }
+
+
     contactsCollection.on('add', renderSingleContact);
     contactsCollection.forEach(renderSingleContact);
 

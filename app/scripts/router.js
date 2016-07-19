@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import settings from './settings';
+
+import contactsCollection from './collections/contactsCollection';
 import session from './models/session';
 
 import renderLogin from './views/login';
@@ -39,8 +41,17 @@ signupFunction : function(){
 },
 contactListFunction : function(){
     let $header = renderHeader();
-    // let $contactList = renderContacts();
+    let $contactList = renderContacts();
     $('.container').empty().append($header);
+
+    contactsCollection.fetch({
+      success: function(){
+        let $contactList = renderContacts();
+        $('.container').append($contactList);
+      }
+    });
+
+
 },
 newContactFunction : function(){
   let $header = renderHeader();

@@ -18,15 +18,15 @@ function createNew() {
         <button id="add-new">add new</button>
     	</form>
     </main>
-    </div>
       `);
     $newContact.find('#add-new').on('click', function(evt) {
+        console.log($newContact.find('input[name="fullname"]').val());
         evt.preventDefault();
         contactsCollection.create({
-            fullname: $newContact.find('#fullname').val(),
-            nickname: $newContact.find('#nickname').val(),
-            email: $newContact.find('#email').val(),
-            phone: $newContact.find('#phone').val()
+            fullname: $newContact.find('input[name="fullname"]').val(),
+            nickname: $newContact.find('input[name="nickname"]').val(),
+            email: $newContact.find('input[name="email"]').val(),
+            phone: $newContact.find('input[name="phone"]').val()
         }, {
             success: function(response) {
                 router.navigate('contacts', {
