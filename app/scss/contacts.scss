@@ -4,8 +4,6 @@
   color: $text;
 }
 
-
-
 //toggle part
 .test {
   background: $secondary;
@@ -19,7 +17,7 @@
 }
 
 .show-dropdownView {
-  background: yellow;
+  background: rgba(#1A5E63,.8);
   .div-dropdown {
     display: block;
   }
