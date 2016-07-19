@@ -483,8 +483,34 @@ button {
     background: rgba(140, 188, 185, 0.6);
     transition: 500ms; }
 
+header {
+  background: #1A5E63;
+  color: #F0F3BD;
+  width: 100vw;
+  margin: 0; }
+  header section {
+    display: inline-flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-around; }
+    header section h2 {
+      padding: 0;
+      margin-left: 45vw;
+      width: 35%; }
+    header section button {
+      justify-content: center; }
+
+.ul-nav {
+  list-style-type: none; }
+  .ul-nav li {
+    display: inline-block; }
+
+#contacts {
+  background: #1A5E63;
+  color: #F0F3BD; }
+
 .test {
-  background: red;
+  background: #1A5E63;
   height: 10%;
   display: flex;
   padding: 20px;

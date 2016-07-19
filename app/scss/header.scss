@@ -1,0 +1,29 @@
+header {
+  background: $secondary;
+  color: $text;
+  // displa/y: inline-flex;
+  width: 100vw;
+  // justify-content: center;
+  margin: 0;
+  section {
+    display: inline-flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-around;
+    h2 {
+      padding: 0;
+      margin-left: 45vw;
+      width: 35%;
+    }
+    button {
+      justify-content: center;
+    }
+  }
+}
+
+    .ul-nav {
+      list-style-type: none;
+      li {
+        display: inline-block;
+      }
+    }

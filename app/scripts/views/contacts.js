@@ -9,8 +9,6 @@ function renderContacts() {
   let $contactsPage = $(`
     <div id="contacts">
       <main>
-        <input type="search" name="search" placeholder="search: " value="">
-        <button class="search-btn">search</button>
         <ul class="ul-contact-list">
         </ul>
       </main>

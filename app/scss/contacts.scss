@@ -1,7 +1,14 @@
 
+#contacts {
+  background: $secondary;
+  color: $text;
+}
+
+
+
 //toggle part
 .test {
-  background: red;
+  background: $secondary;
   height: 10%;
   display: flex;
   padding: 20px;
